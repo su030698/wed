@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .static{border: 1px solid blue;
+        width: 100px; height: 100px;
+        position: static;
+      }
+
+      .ralative{border: 1px solid red;
+        width: 100px; height: 100px;
+        position: relative;
+        left: 150px; top: 50px;
+      }
+
+      .absolute{border: 1px solid gray;
+        width: 100px; height: 100px;
+        position: absolute;
+        left: 150px; top: 50px;
+      }
+
+      .fixed{border: 3px solid yellow;
+        width: 100px; height: 100px;
+      position: fixed;
+      top: 0px; right: 100px
+      }
+
+
+
+      </style>
+  </head>
+  <body>
+    <h1>포지션에 관한 훈련</h1>
+    <div class="static">static</div>
+    <div class="static">static</div>
+    <div class="ralative">ralative</div>
+
+    <div class="absolute">
+      absolute
+    <div class="absolute">
+    absolute
+    </div>
+    </div>
+    <div class="fixed">fixed</div>
+<!--포지션에 관한 설명
+    1.static-처음 최종 세팅상태를 말한다.
+    2.ralative-상대적이라는 뜻. 위치를 입력하면 포지션이 됨.
+    3.absolute-절대적인, 값을 집어넣으면 그 값을 기준으로 넣음
+    4.fixed-고정됨.
+
+    +ralative(이 두개를 가장 많이 씀)
+    +absolute
+-->
+  </body>
+</html>
