@@ -2,56 +2,63 @@
 <html lang="kr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
     <title></title>
-    <style>
-      .static{border: 1px solid blue;
-        width: 100px; height: 100px;
-        position: static;
-      }
+<style>
+body, h1{margin: 0px;}
+#scene{
+  height: 800px; background-size: cover;
+  overflow: hidden; background-attachment: fixed;
+}
+#scene h1{position: relative; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
+text-align: center;}
+  .one{background-image: url(jpg/img_5.png);}
+  .two{background-image: url(jpg/img_6.png);}
+  .three{background-image: url(jpg/img_7.png);}
 
-      .ralative{border: 1px solid red;
-        width: 100px; height: 100px;
-        position: relative;
-        left: 150px; top: 50px;
-      }
+/*---푸터 스타일 지정--*/
+footer{height: 100px; background-color: rgba(0, 0, 0, 0.7);}
+.footer{position: relative; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
+text-align: center; font-family: 'Noto Sans', sans-serif; font-size: 0.9rem; font-weight: 100; color: White;}
 
-      .absolute{border: 1px solid gray;
-        width: 100px; height: 100px;
-        position: absolute;
-        left: 150px; top: 50px;
-      }
+/*--네비 부분 적용--*/
+.wrap{height: 100px; width: 100%; position: fixed; background-color: white; z-index: 10;}
+.logo{display: inline-block; margin-left: 240px;}
+.nav{position: fixed; right: 240px; top: 35px; display: inline-block;
+  font-family: 'Noto Sans', sans-serif; font-size: 0.9rem; font-weight: 600;}
 
-      .fixed{border: 3px solid yellow;
-        width: 100px; height: 100px;
-      position: fixed;
-      top: 0px; right: 100px
-      }
+.space{margin-left: 3rem;}
 
-
-
-      </style>
+/*--메뉴컬러 및 쿨오버 장착--*/
+a, a:link :visited :active{color: gray; text-decoration: none;}
+a:hover{color: #da0812}
+</style>
   </head>
+
   <body>
-    <h1>포지션에 관한 훈련</h1>
-    <div class="static">static</div>
-    <div class="static">static</div>
-    <div class="ralative">ralative</div>
+  <!--네비부분작업-->
+<nav class="wrap"><div class="logo"><img src="jpg/img_1.png"></div>
+<div class="nav">
+  <a href="p01.html">EF-S 35mm F2.8 Macro IS STM</a><span class="space"></span>
+  <a href="p02.html">EF-S 18-55mm F4-5.6 IS STM</a><span class="space"></span>
+  <a href="p03.html">EF 70-300mm F4-5.6 IS II USM</a><span class="space"></span>
+</div>
+</nav>
+<!--셀렉트부분작업-->
+<section id="scene" class="one">
+<h1><a href="p01.html"><img src="jpg/text_1.png"></h1>
+</section>
+<section id="scene" class="two">
+<h1><a href="p02.html"><img src="jpg/text_2.png"></h1>
+</section>
+<section id="scene" class="three">
+<h1><a href="p03.html"><img src="jpg/text_3.png"></h1>
+</section>
+<!--푸터부분작업-->
+<footer>
+  <div class="footer">@copy right 2019 canon korea consumer lmaging, all right reseved</div>
+</footer>
 
-    <div class="absolute">
-      absolute
-    <div class="absolute">
-    absolute
-    </div>
-    </div>
-    <div class="fixed">fixed</div>
-<!--포지션에 관한 설명
-    1.static-처음 최종 세팅상태를 말한다.
-    2.ralative-상대적이라는 뜻. 위치를 입력하면 포지션이 됨.
-    3.absolute-절대적인, 값을 집어넣으면 그 값을 기준으로 넣음
-    4.fixed-고정됨.
-
-    +ralative(이 두개를 가장 많이 씀)
-    +absolute
--->
   </body>
 </html>
